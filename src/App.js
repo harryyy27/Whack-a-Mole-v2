@@ -38,23 +38,26 @@ class App extends Component {
   };
 
   handleStart = () => {
-    console.log('hello')
+    console.log("hello");
     this.setState(prevState => ({
       hasStarted: !prevState.hasStarted
     }));
   };
 
-
   render() {
     return (
       <div className="App">
-      {this.state.hasStarted ?  <Landing hasStarted={this.handleStart} />: <Timer
-          ref="timer"
-          startGame={this.startGame}
-          minutes={this.minutes}
-          seconds={this.seconds}
-          time={this.state.time}
-        />  }        
+        {this.state.hasStarted ? (
+          <Landing hasStarted={this.handleStart} />
+        ) : (
+          <Timer
+            ref="timer"
+            startGame={this.startGame}
+            minutes={this.minutes}
+            seconds={this.seconds}
+            time={this.state.time}
+          />
+        )}
       </div>
     );
   }
