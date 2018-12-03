@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import styled from "styled-components"
-import Header from "./Header"
+// import styled from "styled-components"
+// import Header from "./components/Header"
+import Timer from "./components/Timer"
 
 
 
-const Button = styled.button.attrs({
-  className: "f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black center"
-})`
-background: red;
-`
+
 
 
 class App extends Component {
+  state = {
+    
+  }
+  
+  
   render() {
     return (
       <div className="App">
-      <Header></Header>
-        <Button>Press me</Button>
+      {/* <Header /> */}
+        <Timer ref="timer"/>
+        
       </div>
     );
   }
