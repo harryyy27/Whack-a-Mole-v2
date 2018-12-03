@@ -14,10 +14,18 @@ class Timer extends Component {
         this.setState((prevState)=>({
             start: !prevState.start
         }));
-        let startTime = Date.now();
+        const startTime = Date.now();
         this.timer = setInterval(() => {
             
+            if(Math.floor(this.state.time>0)){
             this.setState((prevState)=>({time: (120000-(Date.now()-startTime))/1000}))
+            }
+            else {
+                this.setState((prevState) => ({
+                    start: !prevState.start
+                }));
+                return; 
+            }
         },0)
       }
       minutes = () => {
@@ -32,8 +40,8 @@ class Timer extends Component {
             <div>
                 <Button onClick={this.startGame}>Press me</Button>
                 
-                <p>{this.minutes()}</p>:
-                <p>{this.seconds()}</p>
+                <span>{this.minutes()}</span>:
+                <span>{this.seconds()}</span>
             </div>
         )
     }
