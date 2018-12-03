@@ -7,7 +7,7 @@ const Logo = styled.h1.attrs({
   
 
  export default () => (
-        <Logo>Whack'a'mole</Logo>
+        <Logo>Thump'a'Trump</Logo>
  );
    
         
