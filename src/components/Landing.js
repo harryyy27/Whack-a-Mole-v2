@@ -28,6 +28,7 @@ const Container = Styled.header.attrs({
   className: "tc bg-orange"
 })``;
 
+
 export default class Landing extends Component {
   render() {
     return (
@@ -40,7 +41,7 @@ export default class Landing extends Component {
         </Container>
         <div className="tc">
             <p>You must stop the orange man before he builds the wall!!!</p>
-            <a class="f6 grow no-underline  ph3 pv2 mb2 dib white bg-black" href="#0">Play Now!</a>
+            <a className="f6 grow no-underline  ph3 pv2 mb2 dib white bg-black" href="#0" onClick={() => this.props.hasStarted()}>Play Now!</a>
         </div>
         
       </div>
