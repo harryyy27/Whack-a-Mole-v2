@@ -25,19 +25,24 @@ const Trump = Styled.img.attrs({
 })``;
 
 const Container = Styled.header.attrs({
-  className: "tc bg-light-gray"
+  className: "tc bg-orange"
 })``;
 
 export default class Landing extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-orange">
         <Container>
           <Title>Thump 'a' Trump</Title>
           <ImageFlip src={punch} />
           <Trump src={trump} alt="avatar" />
           <Image src={punch} />
         </Container>
+        <div className="tc">
+            <p>See how often you can Thump the Trump before he can build the wall</p>
+            <a class="f6 grow no-underline  ph3 pv2 mb2 dib white bg-black" href="#0">Play Now!</a>
+        </div>
+        
       </div>
     );
   }
