@@ -39,7 +39,7 @@ export default class Landing extends Component {
           <Image src={punch} />
         </Container>
         <div className="tc">
-            <p>See how often you can Thump the Trump before he can build the wall</p>
+            <p>You must stop the orange man before he builds the wall!!!</p>
             <a class="f6 grow no-underline  ph3 pv2 mb2 dib white bg-black" href="#0">Play Now!</a>
         </div>
         
