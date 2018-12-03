@@ -4,18 +4,18 @@ import punch from "../images/punch.png"
 import trump from "../images/Trump.png"
 
 const Title = Styled.h1.attrs({
-    className: " raleway dib relative bottom-2 "
+    className: " Roboto  relative top-1 "
 })`
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-font-family: Raleway
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+font-family: Roboto
 `;
 
 const Image = Styled.img.attrs({
-    className: "h4 dib relative top-1 left-1"
+    className: "h4 dib relative  left-1"
 })``;
 
 const ImageFlip = Styled.img.attrs({
-    className: "h4 dib relative top-1 right-1 "
+    className: "h4 dib relative  right-1 "
 })`
 transform: scaleX(-1)
 `;
@@ -30,16 +30,16 @@ export default class Landing extends Component {
         return (
             <div>
                 <Container>
+                   
+                   <Title>Thump 'a' Trump</Title>
                     <ImageFlip src={punch} />
-                    <Title>Thump 'a' Trump</Title>
-                    <Image src={punch} />
-
-                    <div className="relative bottom-2 ">
                                         <img
                                             src={trump}
                                             className="br-100  h4 w4 dib " alt="avatar" />
 
-                                    </div>
+                    <Image src={punch} />
+
+                   
                 </Container>
                 
             </div>
