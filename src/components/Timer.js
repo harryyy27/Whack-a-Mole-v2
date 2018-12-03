@@ -8,7 +8,7 @@ const Button = styled.button.attrs({
 class Timer extends Component {
     state= {
         start: false,
-        time: 120000,
+        time: 120,
     }
     startGame = () =>  {
         this.setState((prevState)=>({
@@ -17,15 +17,23 @@ class Timer extends Component {
         let startTime = Date.now();
         this.timer = setInterval(() => {
             
-            this.setState((prevState)=>({time: prevState.time-(Date.now()-startTime)}))
+            this.setState((prevState)=>({time: (120000-(Date.now()-startTime))/1000}))
         },0)
+      }
+      minutes = () => {
+          return Math.floor(this.state.time/60);
+      }
+      seconds = () => {
+          return ('00'+ Math.floor(this.state.time%60)).slice(-2);
       }
     
     render() {
         return (
             <div>
                 <Button onClick={this.startGame}>Press me</Button>
-                <p>{this.state.time}</p>
+                
+                <p>{this.minutes()}</p>:
+                <p>{this.seconds()}</p>
             </div>
         )
     }
