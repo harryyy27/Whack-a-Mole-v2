@@ -8,6 +8,7 @@ const Button = styled.button.attrs({
 `;
 export default class Timer extends Component {
     render() {
+    
         return (
             <div className="tc">
                 <Button onClick={() => this.props.startGame()}>Press me</Button>

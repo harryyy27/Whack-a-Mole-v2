@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Landing from "./components/Landing";
 // import styled from "styled-components"
 // import Header from "./components/Header"
+import Grid from "./components/Grid"
 import Timer from "./components/Timer";
 
 class App extends Component {
@@ -57,7 +58,13 @@ class App extends Component {
             seconds={this.seconds}
             time={this.state.time}
           />
-        )}
+          
+        )
+      
+      }
+      <Grid
+          hasStarted={this.state.hasStarted} 
+          />
       </div>
     );
   }
