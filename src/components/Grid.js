@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Row = styled.div.attrs({
-    className: 'dt dt--fixed'
+    className: 'dt dt--fixed tc pa2 collapse'
 })``;
 const Cell = styled.div.attrs({
-    className: 'dtc w-25 vh-25 tc'
+    className: 'dtc w-100 h4 bg-orange  pr4 outline'
 })``;
+
 export default class Grid extends Component {
     render() {
         if(this.props.hasStarted){
@@ -14,9 +15,9 @@ export default class Grid extends Component {
         }
         else {
         return(
-            <div>
+            <div className="mw5 mw7-ns pa3 center bg-gray">
                 <Row>
-                    <Cell>1</Cell>
+                    <Cell className="bg-orange ma2">1</Cell>
                     <Cell>2</Cell>
                     <Cell>3</Cell>
                 </Row>
