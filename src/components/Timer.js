@@ -12,6 +12,8 @@ export default class Timer extends Component {
             <div className="tc">
                 <Button onClick={() => this.props.startGame()}>Press me</Button>
                 <span>{this.props.minutes()}</span>:<span>{this.props.seconds()}</span>
+                <br></br>
+                <Button onClick={() => this.props.internal()}> Internal Timer </Button>
             </div>
         );
     }
