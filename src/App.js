@@ -8,11 +8,39 @@ import Timer from "./components/Timer";
 class App extends Component {
   state = {
     start: false,
+    countdown: false,
+    countTime: 3,
     time: 120,
     hasStarted: true
   };
 
   // Timer Functions
+  startCountDown = () => {
+    this.setState(prevState => ({
+      countdown: !prevState.countdown
+    }));
+    const startCount = Date.now();
+    this.countTimer = setInterval(()=>{
+      if(Math.ceil(this.state.countTime >0)){
+        this.setState(prevState => ({
+          countTime: (3000 -(Date.now()- startCount)) /1000
+        }))
+      }
+      else {
+        this.setState(prevState=>({
+          countdown: !prevState.countdown
+        }))
+       
+        this.startGame();
+        this.clearTimer(this.countTimer);
+      }
+    })
+    
+    
+  }
+  clearTimer = (timer)=>{
+    clearInterval(timer);
+  }
   startGame = () => {
     this.setState(prevState => ({
       start: !prevState.start
@@ -27,7 +55,7 @@ class App extends Component {
         this.setState(prevState => ({
           start: !prevState.start
         }));
-        return;
+        this.clearTimer(this.timer);
       }
     }, 0);
   };
@@ -53,6 +81,7 @@ class App extends Component {
         ) : (
           <Timer
             ref="timer"
+            startCountDown={this.startCountDown}
             startGame={this.startGame}
             minutes={this.minutes}
             seconds={this.seconds}
