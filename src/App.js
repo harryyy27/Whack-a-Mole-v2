@@ -23,7 +23,7 @@ class App extends Component {
     this.countTimer = setInterval(()=>{
       if(Math.ceil(this.state.countTime >0)){
         this.setState(prevState => ({
-          countTime: (3000 -(Date.now()- startCount)) /1000
+          countTime: Math.floor((3000 -(Date.now()- startCount)) / 1000 )
         }))
       }
       else {
