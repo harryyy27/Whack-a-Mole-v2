@@ -11,7 +11,7 @@ export default class Timer extends Component {
     
         return (
             <div className="tc">
-                <Button onClick={() => this.props.startGame()}>Press me</Button>
+                <Button onClick={()=>{this.props.startCountDown()}}>Press me</Button>
                 <span>{this.props.minutes()}</span>:<span>{this.props.seconds()}</span>
             </div>
         );
