@@ -42,6 +42,7 @@ class App extends Component {
     clearInterval(timer);
   }
   startGame = () => {
+    if (this.state.start === false) {
     this.setState(prevState => ({
       start: !prevState.start
     }));
@@ -58,6 +59,7 @@ class App extends Component {
         this.clearTimer(this.timer);
       }
     }, 0);
+  }
   };
   minutes = () => {
     return Math.floor(this.state.time / 60);
