@@ -50,7 +50,7 @@ class App extends Component {
     this.timer = setInterval(() => {
       if (Math.floor(this.state.time > 0)) {
         this.setState(prevState => ({
-          time: (120000 - (Date.now() - startTime)) / 1000
+          time: Math.floor((120000 - (Date.now() - startTime)) / 1000)
         }));
       } else {
         this.setState(prevState => ({
