@@ -13,6 +13,8 @@ export default class Timer extends Component {
             <div className="tc">
                 <Button onClick={()=>{this.props.startCountDown()}}>Press me</Button>
                 <span>{this.props.minutes()}</span>:<span>{this.props.seconds()}</span>
+                <br />
+                <span>{this.props.countTime}</span>
             </div>
         );
     }

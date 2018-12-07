@@ -88,6 +88,7 @@ class App extends Component {
             minutes={this.minutes}
             seconds={this.seconds}
             time={this.state.time}
+            countTime={this.state.countTime}
           />
           
         )
